@@ -1,10 +1,26 @@
 import axios from 'axios';
 import { useState } from 'react';
-
-// import { useSelector } from 'react-redux';
-
+import { useDispatch } from 'react-redux';
+import { HashRouter as Router, useHistory } from 'react-router-dom';
 
 function Comments() {
+
+	const history = useHistory();
+	const dispatch = useDispatch();
+	const [comments, setComments] = useState('');
+
+    const handleSubmit = (event) => {
+		event.preventDefault();
+
+        dispatch({
+			type: 'SET_COMMENTS',
+			payload: {
+			    comments: comments,
+			},
+		});
+		history.push('/Review');
+	};
+
     return (
 
         <>
@@ -15,8 +31,12 @@ function Comments() {
 
             <h2>Any Comments you want to leave?</h2>
             <h5>Comments?</h5>
-            <input></input>
-            <button>Next</button>
+            <input
+            label='Comments'
+            value={comments}
+            onChange={(event) => setComments(event.target.value)}
+            ></input>
+            <button onClick={handleSubmit}>Next</button>
         </>
     )
 }

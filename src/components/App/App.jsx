@@ -7,31 +7,31 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
-
+import Review from '../Review/Review';
 
 function App() {
 
   return (
     <Router>
       <div className='App'>
-        
+
         <main>
           <Route path='/' exact>
             <Feeling />
           </Route>
-          {/* <Route path='/Understanding' exact>
-            <UnderstandingForm />
+          <Route path='/Understanding' exact>
+            <Understanding />
           </Route>
           <Route path='/Support' exact>
-            <SupportForm />
+            <Support />
           </Route>
           <Route path='/Comments' exact>
-            <CommentsForm />
-          </Route> */}
-          {/* <Route path='/Review' exact>
+            <Comments />
+          </Route>
+          <Route path='/Review' exact>
             <Review />
           </Route>
-          <Route path='/ThankYou' exact>
+          {/* <Route path='/ThankYou' exact>
             <ThankYou />
           </Route> */}
         </main>

@@ -13,13 +13,13 @@ import logger from 'redux-logger';
 // form reducer for GET from App.jsx
 
 const formReducer = (state = {
-    feeling: 0,
-    understanding: 0,
-    Support: 0,
-    comments: '',
+    // feeling: 0,
+    // understanding: 0,
+    // support: 0,
+    // comments: '',
 }, action) => {
 
-    if (action.type === 'GET_FEELING') {
+    if (action.type === 'SET_FEELING') {
         const { feeling } = action.payload;
         return {
             ...state,
@@ -27,7 +27,7 @@ const formReducer = (state = {
         }
     }
 
-    if (action.type === 'GET_UNDERSTANDING') {
+    if (action.type === 'SET_UNDERSTANDING') {
         const { understanding } = action.payload;
         return {
             ...state,
@@ -35,7 +35,7 @@ const formReducer = (state = {
         }
     }
 
-    if (action.type === 'GET_SUPPORT') {
+    if (action.type === 'SET_SUPPORT') {
         const { support } = action.payload;
         return {
             ...state,
@@ -43,7 +43,7 @@ const formReducer = (state = {
         }
     }
 
-    if (action.type === 'GET_COMMENTS') {
+    if (action.type === 'SET_COMMENTS') {
         const { comments } = action.payload;
         return {
             ...state,
