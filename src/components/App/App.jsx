@@ -12,13 +12,10 @@ import ThankYou from '../ThankYou/ThankYou';
 import Admin from '../Admin/Admin';
 
 function App() {
-
+// all the paths to the various components=========================>
   return (
     <Router>
-      <div className='App'
-      // style={{ backgroundImage: "url(images/IMG-2008.jpg)" }}
-      >
-
+      <div className='App'>
         <main>
           <Route path='/' exact>
             <Feeling />
