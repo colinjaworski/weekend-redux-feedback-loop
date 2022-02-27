@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className='App'
-      style={{ backgroundImage: "url(images/IMG-2008.jpg)" }}
+      // style={{ backgroundImage: "url(images/IMG-2008.jpg)" }}
       >
 
         <main>

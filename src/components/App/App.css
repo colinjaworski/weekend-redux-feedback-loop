@@ -2,14 +2,15 @@
   height:650px;
   width: 1200px;
   text-align: center;
-  background-repeat: no-repeat;
-  object-fit:contain;  
+  /* background-repeat: no-repeat;
+  object-fit:contain;   */
+  background-image: linear-gradient(rgb(0, 247, 255), rgb(153, 0, 255));
 }
 
 .App-header {
-  background-color: #033a94ec;
+  background-color: #3481fdec;
   padding: 30px;
-  color: white;
+  color: antiquewhite;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -33,7 +34,7 @@ h4 {
   background-color: rgb(226, 226, 226);
   width: 300px;
   height: 450px;
-  box-shadow: 15px 15px 40px -1px rgba(0, 0, 0, 0.486);
+  box-shadow: 40px 40px 10px 0px rgba(110, 0, 110, 0.863);
   border-radius: 15px;
   cursor:grab
 }
@@ -45,7 +46,7 @@ h4 {
   background-color: rgb(226, 226, 226);
   width: 300px;
   height: 450px;
-  box-shadow: 15px 15px 40px -1px rgba(0, 0, 0, 0.486);
+  box-shadow: 40px 40px 10px 0px rgba(110, 0, 110, 0.863);
   border-radius: 15px;
   cursor:grab
   
@@ -58,7 +59,7 @@ h4 {
   background-color: rgb(226, 226, 226);
   width: 300px;
   height: 300px;
-  box-shadow: 15px 15px 40px -1px rgba(0, 0, 0, 0.486);
+  box-shadow: 40px 40px 10px 0px rgba(110, 0, 110, 0.863);
   border-radius: 15px;
   cursor:grab
 
@@ -73,14 +74,17 @@ h4 {
 
 .button {
   background-color: rgba(126, 126, 126, 0.342);
+  border-color: rgba(255, 0, 212, 0.294);
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 .reviewButton {
   padding: 5px;
   margin-top: 30px;
   background-color: rgba(126, 126, 126, 0.342);
+  border-color: rgba(255, 0, 212, 0.294);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -89,6 +93,7 @@ h4 {
   padding: 5px;
   margin-top: 45px;
   background-color: rgba(126, 126, 126, 0.342);
+  border-color: rgba(255, 0, 212, 0.294);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -96,5 +101,5 @@ h4 {
 /* buttons==================================================== */
 
 .slider {
-cursor:grabbing
+cursor:grabbing;
 }
