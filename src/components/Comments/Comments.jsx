@@ -18,6 +18,7 @@ function Comments() {
 			    comments: comments,
 			},
 		});
+        setComments('');
 		history.push('/Review');
 	};
 

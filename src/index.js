@@ -8,14 +8,13 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 
-
 // REDUCER!!!=============================================================>
 // form reducer for GET from App.jsx
 
 const formReducer = (state = {
-    // feeling: 0,
-    // understanding: 0,
-    // support: 0,
+    // feeling: 1,
+    // understanding: 1,
+    // support: 1,
     // comments: '',
 }, action) => {
 
@@ -49,7 +48,17 @@ const formReducer = (state = {
             ...state,
             comments: comments,
         }
-    };
+    }
+    if (action.type === 'DELETE_VALUES') {
+        
+        return {
+            ...state,
+            feeling: '',
+            understanding: '',
+            support: '',
+            comments: '',
+        }
+    }
     return state
 };
 // END REDUCER!!!==============================================================>

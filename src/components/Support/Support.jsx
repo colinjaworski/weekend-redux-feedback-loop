@@ -11,13 +11,17 @@ function Support() {
 
     const handleSubmit = (event) => {
 		event.preventDefault();
-
+        if (support === '') {
+            alert('plz set a value');
+            return
+        } else
         dispatch({
 			type: 'SET_SUPPORT',
 			payload: {
 			    support: support,
 			},
 		});
+        setSupport('');
 		history.push('/Comments');
 	};
 
@@ -32,6 +36,7 @@ function Support() {
             <h2>How well are you being supported?</h2>
             <h5>Support?</h5>
             <input
+            type='range'min='1' max='5'
             label='Support'
             value={support}
             onChange={(event) => setSupport(event.target.value)}

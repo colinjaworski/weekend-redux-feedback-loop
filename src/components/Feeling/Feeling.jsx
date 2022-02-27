@@ -4,21 +4,26 @@ import { useDispatch } from 'react-redux';
 import { HashRouter as Router, useHistory } from 'react-router-dom';
 
 function Feeling() {
-	const history = useHistory();
-	const dispatch = useDispatch();
-	const [feeling, setFeeling] = useState('');
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const [feeling, setFeeling] = useState('');
 
     const handleSubmit = (event) => {
-		event.preventDefault();
+        event.preventDefault();
 
-        dispatch({
-			type: 'SET_FEELING',
-			payload: {
-			    feeling: feeling,
-			},
-		});
-		history.push('/Understanding');
-	}; 
+        if (feeling === '') {
+            alert('plz set a value');
+            return
+        } else
+            dispatch({
+                type: 'SET_FEELING',
+                payload: {
+                    feeling: feeling,
+                }
+            });
+        setFeeling('');
+        history.push('/Understanding');
+    };
 
 
     return (
@@ -31,9 +36,10 @@ function Feeling() {
             <h2>How are you feeling today?</h2>
             <h5>Feeling?</h5>
             <input
-            label='Feeling'
-            value={feeling}
-            onChange={(event) => setFeeling(event.target.value)}
+                type='range' min='1' max='5'
+                label='Feeling'
+                value={feeling}
+                onChange={(event) => setFeeling(event.target.value)}
             ></input>
             <button onClick={handleSubmit}>Next</button>
         </>

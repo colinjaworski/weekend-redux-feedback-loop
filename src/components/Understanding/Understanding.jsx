@@ -11,13 +11,17 @@ function Understanding() {
 
     const handleSubmit = (event) => {
 		event.preventDefault();
-
+        if (understanding === '') {
+            alert('plz set a value');
+            return
+        } else
         dispatch({
 			type: 'SET_UNDERSTANDING',
 			payload: {
 			    understanding: understanding,
 			},
 		});
+        setUnderstanding('');
 		history.push('/Support');
 	}; 
     
@@ -31,6 +35,7 @@ function Understanding() {
             <h2>How well are you understanding the content?</h2>
             <h5>Understanding?</h5>
             <input
+            type='range'min='1' max='5'
             label='Understanding'
             value={understanding}
             onChange={(event) => setUnderstanding(event.target.value)}

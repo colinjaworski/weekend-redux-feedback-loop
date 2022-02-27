@@ -8,6 +8,8 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
+import Admin from '../Admin/Admin';
 
 function App() {
 
@@ -31,9 +33,12 @@ function App() {
           <Route path='/Review' exact>
             <Review />
           </Route>
-          {/* <Route path='/ThankYou' exact>
+          <Route path='/ThankYou' exact>
             <ThankYou />
-          </Route> */}
+          </Route>
+          <Route path='/Admin' exact>
+            <Admin />
+          </Route >
         </main>
       </div>
     </Router>
