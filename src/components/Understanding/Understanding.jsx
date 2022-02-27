@@ -26,7 +26,7 @@ function Understanding() {
 	}; 
     
     return (
-        <>
+        <div className ="card">
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
                 <h4>Don't forget aboud it!</h4>
@@ -35,13 +35,15 @@ function Understanding() {
             <h2>How well are you understanding the content?</h2>
             <h5>Understanding?</h5>
             <input
+            className = "slider"
             type='range'min='1' max='5'
             label='Understanding'
             value={understanding}
             onChange={(event) => setUnderstanding(event.target.value)}
             ></input>
-            <button onClick={handleSubmit}>Next</button>
-        </>
+            <button className ="button"
+            onClick={handleSubmit}>Next</button>
+        </div>
     )
 }
 

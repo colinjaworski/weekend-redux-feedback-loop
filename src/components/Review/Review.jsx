@@ -35,15 +35,22 @@ function Review() {
     // ===== RETURN ======================================= //
     return (
         <>
-            <h4>Review Your Feedback</h4>
-            <ul>
-                <li>Feelings:&nbsp;{currentReview.feeling}</li>
-                <li>Understanding:&nbsp;{currentReview.understanding}</li>
-                <li>Support:&nbsp;{currentReview.support}</li>
-                <li>Comments:&nbsp;{currentReview.comments}</li>
-            </ul>
+        <div className = "reviewCard">
+        <header className='App-header'>
+                <h1 className='App-title'>Thanks!</h1>
+                <h4>Review your feedback</h4>
+            </header>
+            <div className ="reviewTable">
+                <p>Feelings:&nbsp;{currentReview.feeling}</p>
+                <p>Understanding:&nbsp;{currentReview.understanding}</p>
+                <p>Support:&nbsp;{currentReview.support}</p>
+                <p>Comments:&nbsp;{currentReview.comments}</p>
+            </div>
 
-            <button onClick={handleReviewClick}>Next</button>
+            <button 
+            className ="reviewButton"
+            onClick={handleReviewClick}>Submit</button>
+            </div>
         </>
     )
 

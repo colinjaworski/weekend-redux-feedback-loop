@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 
-
 function Admin() {
     console.log('in admin function')
     const [feedback, setFeedback] = useState('');
@@ -25,20 +24,25 @@ function Admin() {
             });
 
     }
-console.log('the feedback', feedback);
-
+    console.log('the feedback', feedback);
     return (
         <>
-            <h2>Feedback Results</h2>
-            <ul>
-                {/* {feedback.map((feedback, i) => (
-                    <li key={i}>{feedback.feeling}
-                    {feedback.understanding}
-                    {feedback.support}
-                    {feedback.comments}
-                    </li>
-                ))} */}
-            </ul>
+            <h1>Feedback Results!</h1>
+
+            {feedback.map((item) => {
+                const { feeling, understanding, support, comments, id } = item;
+                return (
+                    <div key={id}>
+                        <div>{feeling}</div>
+                        <div>{understanding}</div>
+                        <div>{support}</div>
+                        <div>{comments}</div>
+                    </div>
+                );
+            })
+
+            }
+
         </>
     )
 

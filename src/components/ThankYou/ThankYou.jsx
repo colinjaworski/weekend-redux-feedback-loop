@@ -11,8 +11,14 @@ function ThankYou() {
     }
     return (
         <>
-            <h2>Thanks for the feedback</h2>
-            <button onClick={handleSubmit}>Leave New Feedback!</button>
+            <div className="thanksCard">
+                <header className='App-header'>
+                    <h1 className='App-title'>Thanks for the feedback!</h1>
+
+                </header>
+                <button className="thanksButton"
+                    onClick={handleSubmit}>Leave New Feedback!</button>
+            </div>
         </>
     )
 }

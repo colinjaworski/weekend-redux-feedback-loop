@@ -24,7 +24,7 @@ function Comments() {
 
     return (
 
-        <>
+        <div className = "card">
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
                 <h4>Don't forget aboud it!</h4>
@@ -37,8 +37,9 @@ function Comments() {
             value={comments}
             onChange={(event) => setComments(event.target.value)}
             ></input>
-            <button onClick={handleSubmit}>Next</button>
-        </>
+            <button className ="button"
+            onClick={handleSubmit}>Next</button>
+        </div>
     )
 }
 

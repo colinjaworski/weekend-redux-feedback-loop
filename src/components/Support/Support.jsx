@@ -27,7 +27,7 @@ function Support() {
 
     return (
 
-        <>
+        <div className = "card">
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
                 <h4>Don't forget aboud it!</h4>
@@ -36,13 +36,15 @@ function Support() {
             <h2>How well are you being supported?</h2>
             <h5>Support?</h5>
             <input
+            className = "slider"
             type='range'min='1' max='5'
             label='Support'
             value={support}
             onChange={(event) => setSupport(event.target.value)}
             ></input>
-            <button onClick={handleSubmit}>Next</button>
-        </>
+            <button className ="button"
+            onClick={handleSubmit}>Next</button>
+        </div>
     )
 }
 

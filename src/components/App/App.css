@@ -1,13 +1,17 @@
 .App {
+  height:650px;
+  width: 1200px;
   text-align: center;
+  background-repeat: no-repeat;
+  object-fit:contain;  
 }
 
 .App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
+  background-color: #033a94ec;
+  padding: 30px;
   color: white;
-  margin-bottom: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .App-title {
@@ -20,4 +24,77 @@
 
 h4 {
   font-style: italic;
+}
+
+.card {
+  position: relative;
+  left: 430px;
+  top: 50px;
+  background-color: rgb(226, 226, 226);
+  width: 300px;
+  height: 450px;
+  box-shadow: 15px 15px 40px -1px rgba(0, 0, 0, 0.486);
+  border-radius: 15px;
+  cursor:grab
+}
+
+.reviewCard {
+  position: relative;
+  left: 430px;
+  top: 50px;
+  background-color: rgb(226, 226, 226);
+  width: 300px;
+  height: 450px;
+  box-shadow: 15px 15px 40px -1px rgba(0, 0, 0, 0.486);
+  border-radius: 15px;
+  cursor:grab
+  
+}
+
+.thanksCard {
+  position: relative;
+  left: 430px;
+  top: 50px;
+  background-color: rgb(226, 226, 226);
+  width: 300px;
+  height: 300px;
+  box-shadow: 15px 15px 40px -1px rgba(0, 0, 0, 0.486);
+  border-radius: 15px;
+  cursor:grab
+
+}
+
+.reviewTable {
+  background-color: rgb(194, 194, 194);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* buttons==================================================== */
+
+.button {
+  background-color: rgba(126, 126, 126, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reviewButton {
+  padding: 5px;
+  margin-top: 30px;
+  background-color: rgba(126, 126, 126, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thanksButton {
+  padding: 5px;
+  margin-top: 45px;
+  background-color: rgba(126, 126, 126, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* buttons==================================================== */
+
+.slider {
+cursor:grabbing
 }
