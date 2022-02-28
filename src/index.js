@@ -12,10 +12,6 @@ import logger from 'redux-logger';
 // form reducer for GET from App.jsx
 
 const formReducer = (state = {
-    // feeling: 1,
-    // understanding: 1,
-    // support: 1,
-    // comments: '',
 }, action) => {
 
     if (action.type === 'SET_FEELING') {
@@ -65,7 +61,7 @@ const formReducer = (state = {
 
 const storeData = createStore(
     combineReducers({
-        // add reducers in here dude!
+        // add reducers in here dude!, Guess we only needed one reducer :)
         formReducer,
     }),
     applyMiddleware(logger)
@@ -74,7 +70,7 @@ const storeData = createStore(
 
 ReactDOM.render(
     <Provider store={storeData}>
-        <App />
+        <App /> 
     </Provider>
     ,
     document.getElementById('root'));

@@ -11,7 +11,7 @@ function Feeling() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (feeling === '') {
+        if (feeling === '') { // input validation!!!
             alert('plz set a value');
             return
         } else
@@ -21,8 +21,8 @@ function Feeling() {
                     feeling: feeling,
                 }
             });
-        setFeeling('');
-        history.push('/Understanding');
+        setFeeling(''); // tried to set feeling to empty after dispatch but didn't work. We do this on another page. 
+        history.push('/Understanding'); // once handleSubmit is run, we move on to the next page at /Understanding
     };
 
 
@@ -37,15 +37,15 @@ function Feeling() {
             <h5>Feeling?</h5>
            {/* <span>1</span> */}
             <input
-            className = "slider"
+            className = "slider" // slider is an input type and we've set the range max and min here
                 type='range' min='1' max='5'
                 label='Feeling'
                 value={feeling}
-                onChange={(event) => setFeeling(event.target.value)}
+                onChange={(event) => setFeeling(event.target.value)} // setting value  of feeling to the targeted input value
             ></input>
             {/* <span>5</span> */}
             &nbsp;
-            <button className ="button"
+            <button className ="button" // <=== this is a button
            
             onClick={handleSubmit}>Next</button>
         </div>
