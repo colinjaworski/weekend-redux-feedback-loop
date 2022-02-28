@@ -4,3 +4,9 @@ body {
   font-family: sans-serif;
   
 }
+
+html {
+  background-image: linear-gradient(rgb(0, 247, 255), rgb(153, 0, 255));
+  height: 100%;
+  /* width: 100%; */
+}
