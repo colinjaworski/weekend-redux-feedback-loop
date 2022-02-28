@@ -3,9 +3,10 @@
 }
 
 .App-header {
-  background-color: #3481fdec;
+  /* background-color: #3481fdec; */
+  background-image: linear-gradient(rgb(255, 0, 191), rgb(195, 0, 255));
   padding: 30px;
-  color: antiquewhite;
+  color: rgb(194, 195, 195);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -25,13 +26,19 @@ h4 {
 .card {
   position: relative;
   top: 100px;
-  background-color: rgb(226, 226, 226);
+  /* background-color: rgb(226, 226, 226); */
+  background-image: linear-gradient(white, rgb(85, 85, 85));
   width: 300px;
   height: 450px;
   box-shadow: 40px 40px 10px 0px rgba(110, 0, 110, 0.863);
   border-radius: 15px;
   cursor:grab;
   margin: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(0, 255, 242);
+  border-right: aliceblue;
+  border-bottom: aliceblue;
 }
 
 .reviewCard {

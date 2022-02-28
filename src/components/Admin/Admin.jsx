@@ -27,19 +27,18 @@ function Admin() {
     console.log('the feedback', feedback);
     return (
         <>
-            <h1>Feedback Results!</h1>
+            <h1>WHERE ARE THE FEEDBACK RESULTS!!!</h1>
 
-            {feedback.map((item) => {
-                const { feeling, understanding, support, comments, id } = item;
-                return (
-                    <div key={id}>
-                        <div>{feeling}</div>
-                        <div>{understanding}</div>
-                        <div>{support}</div>
-                        <div>{comments}</div>
+            {feedback.map((item) => 
+             (
+                    <div key={item.id}>
+                        <p>{item.feeling}</p>
+                        <p>{item.understanding}</p>
+                        <p>{item.support}</p>
+                        <p>{item.comments}</p>
                     </div>
-                );
-            })
+             )
+            )
 
             }
 
