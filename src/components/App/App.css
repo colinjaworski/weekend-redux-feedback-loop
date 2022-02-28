@@ -36,27 +36,27 @@ h4 {
 
 .reviewCard {
   position: relative;
-  left: 430px;
-  top: 50px;
+  top: 100px; 
   background-color: rgb(226, 226, 226);
   width: 300px;
   height: 450px;
   box-shadow: 40px 40px 10px 0px rgba(110, 0, 110, 0.863);
   border-radius: 15px;
-  cursor:grab
+  cursor:grab;
+  margin: auto;
   
 }
 
 .thanksCard {
   position: relative;
-  left: 430px;
-  top: 50px;
+  top: 100px;
   background-color: rgb(226, 226, 226);
   width: 300px;
   height: 300px;
   box-shadow: 40px 40px 10px 0px rgba(110, 0, 110, 0.863);
   border-radius: 15px;
-  cursor:grab
+  cursor:grab;
+  margin: auto;
 
 }
 
